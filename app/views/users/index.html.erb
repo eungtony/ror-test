@@ -1,0 +1,24 @@
+<p id="notice"><%= notice %></p>
+
+<h1>Users</h1>
+
+    <% @users.each do |user| %>
+        <td><%= user.id %></td>
+        <td><%= user.username %></td>
+        <td><%= user.email %></td>
+        <h2>Posts</h2>
+        <td>
+             <% user.posts.each do |post| %>
+                <p><%= post.title %></p>
+                <p><%= post.body %></p>
+                <hr>
+                <p><%= link_to 'Destroy', post, method: :delete, data: { confirm: 'Are you sure?' } %></p>
+             <% end %>
+        </td>
+        <td><%= link_to 'Show', user %></td>
+        <td><%= link_to 'Edit', edit_user_path(user) %></td>
+        <td><%= link_to 'Destroy', user, method: :delete, data: { confirm: 'Are you sure?' } %></td>
+    <% end %>
+<br>
+
+<%= link_to 'New User', new_user_path %>
