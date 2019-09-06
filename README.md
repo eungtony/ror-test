@@ -1,24 +1,17 @@
 # README
 
-This README would normally document whatever steps are necessary to get the
-application up and running.
+git clone https://github.com/eungtony/ror-test.git
 
-Things you may want to cover:
+cd ror-test
 
-* Ruby version
+bundle install
 
-* System dependencies
+rails db:migrate
 
-* Configuration
+rails s
 
-* Database creation
+>> http://localhost:3000/users/new
 
-* Database initialization
+créer un user "test"
 
-* How to run the test suite
-
-* Services (job queues, cache servers, search engines, etc.)
-
-* Deployment instructions
-
-* ...
+Lancer les tests d'inté
