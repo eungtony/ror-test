@@ -24,6 +24,6 @@
   <%= form.select :user, User.pluck(:id) %>
 
   <div class="actions">
-    <%= form.submit %>
+    <%= form.submit(class: 'add-btn') %>
   </div>
 <% end %>
